@@ -9,7 +9,7 @@ const CartItem = ({ id, img, title, price, amount }) => {
       <div style={{ flex: 1, paddingLeft: '20px' }}>
         <h4>{title}</h4>
         <h4 id={`cart-item-price-${id}`}>${price}</h4>
-        <button onClick={() => remove(id)} style={{ color: 'red', border: 'none', background: 'none', cursor: 'pointer' }}>remove</button>
+        <button id={`cart-item-remove-${id}`} onClick={() => remove(id)} style={{ color: 'red', border: 'none', background: 'none', cursor: 'pointer' }}>remove</button>
       </div>
       <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
         <button id={`increment-btn-${id}`} onClick={() => increase(id)} style={{ cursor: 'pointer', border: 'none', background: 'none', fontSize: '20px' }}>
